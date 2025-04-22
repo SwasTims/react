@@ -3,15 +3,15 @@ import React from 'react';
 
 const { Title } = Typography;
 
-const Contact = () => {
+const Profile = () => {
   const onFinish = (values) => {
     console.log('Success:', values);
-    message.success('Message sent successfully!');
+    message.success('User Added!');
   };
 
   return (
     <div>
-      <Title>Contact Us</Title>
+      <Title>Profile</Title>
       <Form layout="vertical" onFinish={onFinish}>
         <Form.Item label="Full Name" name="name" rules={[{ required: true, message: 'Please enter your name' }]}>
           <Input />
@@ -19,15 +19,12 @@ const Contact = () => {
         <Form.Item label="Email" name="email" rules={[{ required: true, type: 'email', message: 'Enter valid email' }]}>
           <Input />
         </Form.Item>
-        <Form.Item label="Message" name="message" rules={[{ required: true, message: 'Please enter a message' }]}>
-          <Input.TextArea/>
-        </Form.Item>
         <Form.Item>
-          <Button type="primary" htmlType="submit">Send Message</Button>
+          <Button type="primary" htmlType="submit">Add</Button>
         </Form.Item>
       </Form>
     </div>
   );
 };
 
-export default Contact;
+export default Profile;

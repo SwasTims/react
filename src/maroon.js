@@ -2,28 +2,29 @@ import { Layout } from 'antd';
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Sidebar from './component/sidebar';
-import About from './pages/about';
-import Contact from './pages/contact';
-import Courses from './pages/courses';
 import Home from './pages/home';
+import MovieDetails from './pages/movieDetails';
+import Profile from './pages/profile';
+import Watchlist from './pages/watchlist';
 
+const { Sider, Content } = Layout;
 
-const {  Sider, Content } = Layout;
 const Maroon = () => {
-const [collapsed] = useState(false);
+  const [collapsed] = useState(false);
+
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Sider collapsible collapsed={collapsed} trigger={null}>
         <Sidebar />
       </Sider>
       <Layout>
-          <h2 style={{ margin: '16px',textAlign:'center', padding:'5px'}}>Himalaya Darshan College</h2>
-        <Content style={{ margin: '16px', textAlign:'center',padding: '20px', background: 'white' }}>
+        <h2 style={{ margin: '16px', textAlign: 'center', padding: '5px' }}>MaroonFlix</h2>
+        <Content style={{ margin: '16px', textAlign: 'center', padding: '20px', background: 'white' }}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/movieDetails" element={<MovieDetails />} />
+            <Route path="/watchlist" element={<Watchlist />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </Content>
       </Layout>
