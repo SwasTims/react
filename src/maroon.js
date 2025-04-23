@@ -18,8 +18,8 @@ const Maroon = () => {
         <Sidebar />
       </Sider>
       <Layout>
-        <h2 style={{ margin: '16px', textAlign: 'center', padding: '5px' }}>MaroonFlix</h2>
-        <Content style={{ margin: '16px', textAlign: 'center', padding: '20px', background: 'white' }}>
+        <h1 style={{ margin: '16px', textAlign: 'center', padding: '5px', color: 'gold'}}>MaroonFlix</h1>
+        <Content style={{ margin: '16px', textAlign: 'center', padding: '20px', background: 'beige' }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/movieDetails" element={<MovieDetails />} />

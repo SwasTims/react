@@ -23,7 +23,7 @@ const Sidebar = () => {
           transition: '0.2s ease-in-out',
         }}
       />
-      <Sider width={160} collapsible collapsed={collapsed} trigger={null} style={{ background: 'pink' }}>
+      <Sider width={160} collapsible collapsed={collapsed} trigger={null} style={{ background: 'gold' }}>
         <Menu theme="dark" mode="inline" onClick={({ key }) => navigate(key)}>
           <Menu.Item key="/" icon={<HomeOutlined />}>Home</Menu.Item>
           <Menu.Item key="/movieDetails" icon={<VideoCameraOutlined />}>Movies</Menu.Item>
